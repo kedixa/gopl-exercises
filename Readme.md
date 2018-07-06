@@ -1,8 +1,11 @@
 # The Go Programming Language Exercises
 
 ## Skipped
-- [x] 14.11
-- [x] 14.14
+- [x] 4.11
+- [x] 4.14
+
+## Unfinished
+- [x] 5.13
 
 ## Reference
 
