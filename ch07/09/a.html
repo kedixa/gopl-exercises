@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tracks</title>
+</head>
+
+<body>
+    <div id="tracks"> </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+    <script type = "text/javascript">
+        var sortBy = "title";
+        window.onload = setTable; 
+        function setTable() {
+            var url = "/sort?q=" + sortBy;
+            $.get(url, function(data) {
+                document.getElementById("tracks").innerHTML = data;
+            });
+        };
+        function clickTable(obj, name) {
+            sortBy += "," + name;
+            setTable();
+        }
+    </script>
+</body>
+
+</html>
