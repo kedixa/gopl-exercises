@@ -26,9 +26,10 @@ func broadcaster() {
 			// Broadcast incoming message to all
 			// clients' outgoing message channels.
 			for cli := range clients {
-				// skip message if cli.C is not ready
+				// skip if cli.C is not ready
 				select {
 				case cli.C <- msg:
+				default:
 				}
 			}
 
